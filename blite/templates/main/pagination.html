@@ -1,0 +1,19 @@
+<div class="pagination color2">
+                {% if items.has_previous %}
+                        <a class="link color1" href="?page={{ items.previous_page_number }}{% if request.GET.title %}&title={{ request.GET.title }}{% endif%}">
+                                <
+                        </a>
+                {% endif %}
+        
+                {% if items.number %}
+                <a class="link color1" href="/">
+                        page {{ items.number }}
+                </a>
+                {% endif %}
+        
+                {% if items.has_next %}
+                        <a class="link color1" href="?page={{ items.next_page_number }}{% if request.GET.title %}&title={{ request.GET.title }}{% endif%}">
+                                >
+                        </a>
+                {% endif %}
+        </div>

@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block form %}
+  <div class="form-wrapper">
+    <form method="POST" action={% url 'blog:post_controller' post_id=post_id %}>
+        <p>Do you really want to delete this Post? This action is irreversible!</p>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Confirm">
+    </form>
+  </div>
+{% endblock %}

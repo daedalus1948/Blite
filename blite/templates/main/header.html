@@ -1,0 +1,15 @@
+<div class="header color2">
+        <a class="link color1" href={% url 'blog:post_controller' %}>home</a>
+        <div class="accounts">
+            {% if user.is_authenticated %}
+                <form class="logout-form" method="POST" action= {% url 'users:logout' %}>
+                    {% csrf_token %}
+                    <button class="link color1" type="submit">logout</button>
+                </form>
+                <a class="link color1" href= {% url 'users:profile' user_id=user.id %}>profile</a>
+            {% else %}
+                <a class="link color1" href= {% url 'users:register' %}> register </a>
+                <a class="link color1" href= {% url 'users:login' %}> login </a>
+            {% endif %}
+        </div>
+</div>

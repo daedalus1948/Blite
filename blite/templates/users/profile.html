@@ -1,0 +1,40 @@
+{% extends 'main/content.html' %}
+
+{% block main_item %}
+    <div class="item main-item color2">
+        <div class="item-header color2">
+                <div class="item-image color1">
+                    <img src="/static/images/edit_item.svg" />
+                </div>
+            <div class="user-title color1">
+                <div class="user-data">
+                    {{ main_item.username }}
+                    {{ main_item.first_name }}
+                    {{ main_item.last_name }}
+                    {{ main_item.email }}
+                </div>
+            </div>
+        </div>
+        <div class="item-footer color2">
+            <div class="info">
+                <a class="link color1" href= {% url 'users:user_posts' user_id=main_item.id %}> all </a>                       
+                <a class="link color1" href= {% url 'users:user_posts' user_id=main_item.id filter='published' %}> published posts </a>
+                <a class="link color1" href= {% url 'users:user_posts' user_id=main_item.id filter='private' %}> private posts </a>
+            </div>
+            <div class="actions">
+                <a class="link color1" href={% url 'users:edit_user' user_id=main_item.id %}>edit profile</a>
+                <a class="link color1" href={% url 'users:delete_user' user_id=main_item.id %}>delete profile</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block itemset %}
+    {% if items %}
+        {% include 'main/itemset.html' %}
+    {% endif %}
+{% endblock %}
+
+
+
+     

@@ -1,0 +1,41 @@
+{% extends 'main/content.html' %}
+
+{% block main_item %}
+    <div class="item main-item color2">
+        <div class="item-header color2">
+            <div class="item-image color1">
+                {% if main_item.picture %}
+                    <img src={{ main_item.picture.url }}/>
+                {% else %}
+                    <img src="/static/images/delete_item.svg"/>
+                {% endif %}
+            </div>
+            <div class="item-title color1">
+                <a class="link color1" href={{ main_item.get_absolute_url }}> {{ main_item.title }} </a>
+            </div>
+        </div>
+        <div class="item-content color1">
+            {{ main_item.content }}
+        </div>
+        <div class="item-footer color2">
+            <div class="author">
+                <a class="link color1" href="{% url 'blog:search_post' %}?author={{main_item.author.username}}">{{ main_item.author.username }}</a>
+            </div>
+            <div class="info">
+                <a class="link color1">{{ main_item.create_date }}</a>
+            </div>
+            <div class="actions">
+                {% if user.id == main_item.author.id or user.is_superuser %} <!-- only admin(superuser) or the post.author can see/use edit/delete buttons -->
+                    <a class="link color1" href={{ main_item.get_edit_url }}> edit </a>
+                    <a class="link color1" href={{ main_item.get_delete_url }}> delete </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block itemset %}
+    {% if items %}
+        {% include 'main/itemset.html' %}
+    {% endif %}
+{% endblock %}

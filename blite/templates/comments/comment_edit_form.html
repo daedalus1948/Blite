@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+
+{% block form %}
+  <div class="form-wrapper">
+    <form class="edit-form" method="POST" action= {% url 'comments:comment_controller' comment_id=comment_id %}>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Edit Comment">
+    </form>
+  </div>
+{% endblock %}

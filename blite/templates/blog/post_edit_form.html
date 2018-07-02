@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+
+{% block form %}
+  <div class="form-wrapper">
+    <form class="edit-form" method="POST" action= {% url 'blog:post_controller' post_id=post_id %} enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Edit Post">
+    </form>
+  </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block form %}
+  <div class="form-wrapper">
+    <form method="POST" action={% url 'comments:comment_controller' comment_id=comment_id %}>
+        <p>Do you really want to delete this Comment? This action is irreversible!</p>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Confirm">
+    </form>
+  </div>
+{% endblock %}

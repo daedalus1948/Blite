@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+    <div class="content">
+
+        <div class="items">
+
+            {% block main_item %}
+            {% endblock %}
+
+            {% block itemset %}
+            {% endblock %}
+
+        </div>
+        
+        {% if items %}
+            {% if items|length >= 1 %} <!-- check if this does not call into db -->
+                {% include 'main/pagination.html' %}
+            {% endif %}
+        {% endif %}
+
+    </div>
+
+    {% include 'main/sidebar.html' %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+<div class="sidebar">
+
+    <div class="widgets">
+        <div class="widget color2">
+            <div class="form-wrapper color1">
+                <form class="color1" action={% url 'blog:search_post' %} >
+                    <input name="title" placeholder="search" >
+                </form>  
+            </div>
+        </div>
+    </div>
+    
+    <div class="widgets">
+        <div class="widget color2">
+            <a class="link color1" href= {% url 'blog:create_post' %}> new post </a>
+        </div>
+    </div>
+
+    {% if add_comment %}
+    <div class="widgets">
+            <div class="widget color2">
+                <a class="link color1" href= {% url 'comments:create_comment' post_id=main_item.id %}> new comment </a>
+            </div>
+    </div>
+    {% endif %}
+
+</div>

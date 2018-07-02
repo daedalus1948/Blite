@@ -1,0 +1,44 @@
+{% block itemset %}
+
+{% for item in items %}
+    <div class="item color2">
+        <div class="item-header color2">
+                <div class="item-image color1">
+                    {% if item.picture %}
+                        <img src={{ item.picture.url }}/>
+                    {% else %}
+                        <img src="/static/images/delete_item.svg"/>
+                    {% endif %}
+                </div>
+            <div class="item-title color1">
+                <a class="link color1" href={{ item.get_absolute_url }}> {{ item.title }} </a>
+            </div>
+        </div>
+        <div class="item-content color1">
+            {{ item.content }}
+        </div>
+        <div class="item-footer color2">
+            <div class="author">
+                <a class="link color1" href="{% url 'blog:search_post' %}?author={{item.author.username}}">{{ item.author.username }}</a>
+            </div>
+            <div class="info">
+                <a class="link color1">{{ item.create_date.day }}.{{ item.create_date.month }}.{{ item.create_date.year }}</a>
+                {% if item.comment_set %}
+                    <a class="link color1" href={{ item.get_absolute_url }}>comments: {{ item.comment_set.count }}</a>
+                {% endif %}
+            </div>
+            <div class="actions">
+                {% if user.id == item.author.id or user.is_superuser %} <!-- only admin(superuser) or the post.author can see/use edit/delete buttons -->
+                    <a class="link color1" href={{ item.get_edit_url }}>edit</a>
+                    <a class="link color1" href={{ item.get_delete_url }}>delete</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
+
+
+
+
