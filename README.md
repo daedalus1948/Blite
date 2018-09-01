@@ -19,5 +19,5 @@ Run the project the standard django way - '(python) manage.py runserver' - the e
 
 Python 3.5+, Django 1.11
 
-## Thank you creators of Python, Django and others
-## Created by Daedalus1948@github, 2017
+### Thank you creators of Python, Django and others
+### Created by Daedalus1948@github, 2017
