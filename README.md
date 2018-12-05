@@ -9,11 +9,11 @@ SQLite is currently configured as the data persistence solution.
 
 ## Instructions
 
-Run this project by copying the project folder to your computer. 
-Create Python virtual environment (eg. - 'python -m venv envname').
-Activate your virtual environment (eg. - 'source envname/bin/activate').
-Install dependencies specified in requirements.txt with pip (eg - "pip install -r requirements.txt").
-Run the project the standard django way - '(python) manage.py migrate && (python) manage.py runserver' - the entry point of the application.
+#Run this project by copying the project folder to your computer. 
+#Create Python virtual environment (eg. - 'python -m venv envname').
+#Activate your virtual environment (eg. - 'source envname/bin/activate').
+#Install dependencies specified in requirements.txt with pip (eg - "pip install -r requirements.txt").
+#Run the project the standard django way - '(python) manage.py migrate && (python) manage.py runserver' - the entry point of the application.
 
 ## Dependencies
 
