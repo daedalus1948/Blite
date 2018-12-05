@@ -2,7 +2,7 @@
 
 BLogLite is a very basic blog web application.
 
-![image not found](https://raw.githubusercontent.com/daedalus1948/project_images/Blite.png)
+[[https://github.com/daedalus1948/project_images/blob/master/Blite.png|alt=octocat]]
 
 
 ## Additional Information
