@@ -15,7 +15,7 @@ SQLite is currently configured as the data persistence solution.
 4) Install dependencies specified in requirements.txt with pip (eg - "pip install -r requirements.txt").
 5) Navigate to the 'Blite' directory.
 6) Run the project the standard django way - '(python) manage.py makemigrations && (python) manage.py migrate && (python) manage.py runserver' - the entry point of the application.
-7) Access the blog application in your browser - url - localhost:8000/blog/
+7) Access the blog application in your browser. url - "localhost:8000/blog/".
 
 ## Dependencies
 
