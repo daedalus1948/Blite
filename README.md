@@ -2,6 +2,9 @@
 
 BLogLite is a very basic blog web application.
 
+![image not found](https://raw.githubusercontent.com/daedalus1948/project_images/Blite.png)
+
+
 ## Additional Information
 
 This application is written in Python 3, using the Django web framework library.
