@@ -13,7 +13,8 @@ SQLite is currently configured as the data persistence solution.
 2) Activate your virtual environment (eg. - 'source envname/bin/activate').
 3) Copy the project folder to your computer. 
 4) Install dependencies specified in requirements.txt with pip (eg - "pip install -r requirements.txt").
-5) Run the project the standard django way - '(python) manage.py makemigrations && (python) manage.py migrate && (python) manage.py runserver' - the entry point of the application.
+5) Navigate to the 'Blite' directory.
+6) Run the project the standard django way - '(python) manage.py makemigrations && (python) manage.py migrate && (python) manage.py runserver' - the entry point of the application.
 
 ## Dependencies
 
