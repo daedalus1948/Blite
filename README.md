@@ -1,6 +1,6 @@
 # BlogLite
 
-BLogLite is a very basic blog web application.
+BlogLite is a very basic blog web application.
 
 ![Blite](https://github.com/daedalus1948/project_images/blob/master/Blite.png)
 
