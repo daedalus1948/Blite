@@ -24,4 +24,4 @@ SQLite is currently configured as the data persistence solution.
 Python 3.5+, Django 1.11
 
 ### Thank you creators of Python, Django and others
-### Created by pre-zbr/Daedalus1948@github, 2018
+### Created by pre-zbr/daedalus1948@github, 2018
